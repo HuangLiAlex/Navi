@@ -2,7 +2,7 @@ package navigation;
 
 public class Nodes {
 	private String nodeName;
-	private int distance;
+	private float cost;
 	
 	public String getNodes() {
 		return nodeName;
@@ -10,15 +10,15 @@ public class Nodes {
 	public void setNodes(String nodeName) {
 		this.nodeName = nodeName;
 	}
-	public int getDistance() {
-		return distance;
+	public float getCost() {
+		return cost;
 	}
-	public void setDistance(int distance) {
-		this.distance = distance;
+	public void setCost(float value) {
+		this.cost = value;
 	}
 
 	@Override
 	public String toString(){
-		return getNodes() + " " + getDistance();
+		return getNodes() + " " + getCost();
 	}
 }
