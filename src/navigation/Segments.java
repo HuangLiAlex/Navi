@@ -1,41 +1,73 @@
 package navigation;
 
 public class Segments{
-	private String node1;
-	private	String node2;
+	private int node1;
+	private	int node2;
 	private float distance;
+	private float cost;
 	private int speed;
-
-	public Segments(String node1, String node2, float distance, int speed){
+	private int congesLvl;
+	private String type;
+	
+	public Segments(int node1, int node2, float distance, String type){
+		this.distance = distance;
 		this.node1 = node1;
 		this.node2 = node2;
-		this.distance = distance;
-		this.speed = speed;
-	}
-	
-	public void setSpeed(int speed) {
-		this.speed = speed;
+		this.type  = type;
+		
+		this.cost = 1;
+		if(type.equals("express")){
+			this.speed = 80 * 1000 / 60;		// 80km/h
+			this.congesLvl =2;
+		}else{
+			this.speed = 40 * 1000 / 60;		// 40km/h
+			this.congesLvl = 1;
+		}
 	}
 
-	public void setDistance(int distance) {
-		this.distance = distance;
+	public int getCongesLvl() {
+		return congesLvl;
+	}
+
+	public float getDistance() {
+		return distance;
+	}
+
+	public int getNode1() {
+		return node1;
+	}
+	public int getNode2() {
+		return node2;
 	}
 	
 	public int getSpeed() {
 		return speed;
 	}
-	
-	public String getNode1() {
-		return node1;
+
+	public String getType() {
+		return type;
 	}
-	public String getNode2() {
-		return node2;
+
+	public float getCost() {
+		return cost;
 	}
-	
-	public float getDistance() {
-		return distance;
+
+	public void setCongesLvl(int congesLvl) {
+		this.congesLvl = congesLvl;
 	}
-	
+
+	public void setDistance(int distance) {
+		this.distance = distance;
+	}
+
+	public void setCost(float cost) {
+		this.cost = cost;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
 	@Override
 	public String toString(){
 		return getNode1() + "->" + getNode2()+ ": " + getDistance() + ", " + getSpeed();

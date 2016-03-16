@@ -1,13 +1,13 @@
 package navigation;
 
 public class Nodes {
-	private String nodeName;
+	private int nodeName;
 	private float cost;
 	
-	public String getNodes() {
+	public int getNodes() {
 		return nodeName;
 	}
-	public void setNodes(String nodeName) {
+	public void setNodes(int nodeName) {
 		this.nodeName = nodeName;
 	}
 	public float getCost() {
