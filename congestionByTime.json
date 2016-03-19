@@ -1,42 +1,13 @@
 {
-	"time": 0800,
-	"fromNode": 0,
-	"toNode": 1,
-	"congestLvl": 1
-}
-{
-	"time": 0800,
-	"fromNode": 0,
-	"toNode": 1,
-	"congestLvl": 1
-}
-{
-	"time": 0800,
-	"fromNode": 0,
-	"toNode": 1,
-	"congestLvl": 1
-}
-{
-	"time": 0800,
-	"fromNode": 0,
-	"toNode": 1,
-	"congestLvl": 1
-}
-{
-	"time": 0800,
-	"fromNode": 0,
-	"toNode": 1,
-	"congestLvl": 1
-}
-{
-	"time": 0800,
-	"fromNode": 0,
-	"toNode": 1,
-	"congestLvl": 1
-}
-{
-	"time": 0800,
-	"fromNode": 0,
-	"toNode": 1,
-	"congestLvl": 1
+	"details": [{
+		"time": 0800,
+		"fromNode": 0,
+		"toNode": 1,
+		"congestLvl": 1
+	}, {
+		"time": 0810,
+		"fromNode": 1,
+		"toNode": 2,
+		"congestLvl": 1
+	}]
 }

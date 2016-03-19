@@ -9,7 +9,7 @@ public class Navigation {
 		
 		InputPattern inputPattern = patternFactory.getPattern("DistSpeed");
 		inputPattern.readMap();
-//		inputPattern = patternFactory.getPattern("congestionByTime");
+		inputPattern = patternFactory.getPattern("congestionByTime");
 		inputPattern.readMap();
 		// read start point and end point, convert to index
 		Dijkstra.dijkstra(1, 27);
