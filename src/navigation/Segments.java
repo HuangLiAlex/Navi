@@ -14,14 +14,12 @@ public class Segments{
 		this.node1 = node1;
 		this.node2 = node2;
 		this.type  = type;
-		
+		this.congesLvl = 1;
 		this.cost = 1;
 		if(type.equals("express")){
 			this.speed = 80 * 1000 / 60;		// 80km/h
-			this.congesLvl =2;
 		}else{
 			this.speed = 40 * 1000 / 60;		// 40km/h
-			this.congesLvl = 1;
 		}
 	}
 

@@ -45,6 +45,10 @@ public class MapSetup implements InputPattern{
 					Segments s = new Segments(nodeName1, nodeName2, distance, type);
 					s.setCost(computeCost(s));
 					segments.add(s);
+					
+					s = new Segments(nodeName2, nodeName1, distance, type);
+					s.setCost(computeCost(s));
+					segments.add(s);
 				} 
 			} 
 		} catch (FileNotFoundException e) {

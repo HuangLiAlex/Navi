@@ -1,5 +1,7 @@
 package navigation;
 
+import java.util.ArrayList;
+
 import patternFactory.*;
 
 public class Navigation {
@@ -9,19 +11,19 @@ public class Navigation {
 		
 		InputPattern inputPattern = patternFactory.getPattern("DistSpeed");
 		inputPattern.readMap();
-		inputPattern = patternFactory.getPattern("congestionByTime");
-		inputPattern.readMap();
+//		inputPattern = patternFactory.getPattern("congestionByTime");
+//		inputPattern.readMap();
 		// read start point and end point, convert to index
-		Dijkstra.dijkstra(1, 27);
+		Dijkstra.dijkstra(27, 3);
 
-//		// show adjList
-//		ArrayList<ArrayList<Segments>> adjList = AdjList.getInstance();
-//		for(int n=0; n<adjList.size(); n++){
-//			for(int j=0; j<adjList.get(n).size(); j++){
-//				System.out.print(adjList.get(n).get(j) + " ");
-//			}
-//			System.out.println();
-//		}
+		// show adjList
+		ArrayList<ArrayList<Segments>> adjList = AdjList.getInstance();
+		for(int n=0; n<adjList.size(); n++){
+			for(int j=0; j<adjList.get(n).size(); j++){
+				System.out.print(adjList.get(n).get(j) + " ");
+			}
+			System.out.println();
+		}
 
 //		// show nodeList
 //		HashMap<String, Integer> nodesMap = NodesMap.getInstance();

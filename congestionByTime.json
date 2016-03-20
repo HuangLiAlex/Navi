@@ -1,13 +1,23 @@
 {
-	"details": [{
-		"time": 0800,
-		"fromNode": 0,
-		"toNode": 1,
-		"congestLvl": 1
-	}, {
-		"time": 0810,
-		"fromNode": 1,
-		"toNode": 2,
-		"congestLvl": 1
-	}]
+	"details": {
+		"0820": [{
+			"fromNode": 0,
+			"toNode": 1,
+			"congestLvl": 1
+		}, {
+			"fromNode": 1,
+			"toNode": 2,
+			"congestLvl": 1
+		}],
+
+		"0900": [{
+			"fromNode": 2,
+			"toNode": 3,
+			"congestLvl": 1
+		}, {
+			"fromNode": 3,
+			"toNode": 4,
+			"congestLvl": 1
+		}]
+	}
 }

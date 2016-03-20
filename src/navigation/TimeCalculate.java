@@ -28,6 +28,7 @@ public class TimeCalculate {
 			for(Segments segment: adjList.get(fromNode)){
 				if(segment.getNode2() == toNode){
 					currSegTime = segment.getCost();
+					System.out.println("currSegTime: "+ currSegTime);
 					break;
 				}
 			}
