@@ -8,10 +8,6 @@ public class PatternFactory {
     	  return null;
       }		
       
-      if(patternType.equalsIgnoreCase("DistSpeed")){
-    	  return new MapSetup();
-      }
-      
       if(patternType.equalsIgnoreCase("congestionByTime")){
     	  return new congestionByTime();
       }

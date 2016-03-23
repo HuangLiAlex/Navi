@@ -1,17 +1,13 @@
-package patternFactory;
+package navigation;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import navigation.*;
+public class MapSetup{
 
-
-public class MapSetup implements InputPattern{
-
-	@Override
-	public void readMap(){
+	public static void mapSetup(){
 		ArrayList<Segments> segments = SegmentList.getInstance();
 		ArrayList<Nodes> nodeList =  NodeList.getInstance();
 		String inputString;
@@ -43,11 +39,12 @@ public class MapSetup implements InputPattern{
 					float distance = Float.parseFloat(sDistance) * 1000;	// meters
 
 					Segments s = new Segments(nodeName1, nodeName2, distance, type);
-					s.setCost(computeCost(s));
+					
+					s.setCost(ComputeCost.computeSingleSegCost(s));
 					segments.add(s);
 					
 					s = new Segments(nodeName2, nodeName1, distance, type);
-					s.setCost(computeCost(s));
+					s.setCost(ComputeCost.computeSingleSegCost(s));
 					segments.add(s);
 				} 
 			} 
@@ -73,9 +70,4 @@ public class MapSetup implements InputPattern{
 			adjList.get(startNode).add(s);
 		}
 	}
-
-	private static float computeCost(Segments segment) {
-		return segment.getDistance() / (segment.getSpeed() / segment.getCongesLvl());
-	}
-
 }

@@ -1,19 +1,13 @@
 package navigation;
 
+import java.sql.Date;
 import java.util.ArrayList;
 
 public class TimeCalculate {
-
+	private Date currentTime;
+	private Nodes currentNode;
 	public static void timeCalculate(ArrayList<Integer> path){
-		// for each segment
-		// 		get fromNode
-		// 		get toNode
-		// 		get segment
-		// 		get segment.cost
-		// 		increament totalTime, refTime
-		// 		if refTime > 5 min
-		// 			update congestion condition
-		// 			refTime -= 5
+		
 		ArrayList<ArrayList<Segments>> adjList = AdjList.getInstance();
 		int i=0;
 		int j=1;
@@ -28,7 +22,7 @@ public class TimeCalculate {
 			for(Segments segment: adjList.get(fromNode)){
 				if(segment.getNode2() == toNode){
 					currSegTime = segment.getCost();
-					System.out.println("currSegTime: "+ currSegTime);
+//					System.out.println("from node: "+ fromNode + " to node: " + toNode + " currSegTime: " + currSegTime);
 					break;
 				}
 			}
@@ -39,7 +33,6 @@ public class TimeCalculate {
 				// update congestion condition
 				refTime -= 5;
 			}
-			
 			// next segment
 			i++;
 			j++;
@@ -47,5 +40,13 @@ public class TimeCalculate {
 		}
 		
 		System.out.println("total time cost: " + totalTime);
+	}
+	
+	public Date getCurrentTime() {
+		return currentTime;
+	}
+	
+	public Nodes getCurrentNode() {
+		return currentNode;
 	}
 }

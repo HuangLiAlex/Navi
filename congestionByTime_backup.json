@@ -1,379 +1,379 @@
 {
 	"details": {
 		"0820": [{
-			"fromNode": 1,
+			"fromNode": 1,		// 1
 			"toNode": 2,
 			"congestLvl": 3
 		},{
-			"fromNode": 5,
+			"fromNode": 5,		// -4
 			"toNode": 4,
 			"congestLvl": 3
 		},{
-			"fromNode": 6,
+			"fromNode": 6,		// -5
 			"toNode": 5,
 			"congestLvl": 2
 		},{
-			"fromNode": 29,
+			"fromNode": 29,		// -7
 			"toNode": 23,
 			"congestLvl": 2
 		},{
-			"fromNode": 26,
+			"fromNode": 26,		// -8
 			"toNode": 29,
 			"congestLvl": 2
 		},{
-			"fromNode": 22,
+			"fromNode": 22,		// -32
 			"toNode": 12,
 			"congestLvl": 2
 		},{
-			"fromNode": 13,
+			"fromNode": 13,		// 34
 			"toNode": 18,
 			"congestLvl": 3
 		},{
-			"fromNode": 18,
+			"fromNode": 18,		// -34
 			"toNode": 13,
 			"congestLvl": 3
 		},{
-			"fromNode": 23,
+			"fromNode": 23,		// -35
 			"toNode": 18,
 			"congestLvl": 4
 		},{
-			"fromNode": 15,
+			"fromNode": 15,		// -40
 			"toNode": 9,
 			"congestLvl": 3
 		},{
-			"fromNode": 20,
+			"fromNode": 20,		// -41
 			"toNode": 15,
 			"congestLvl": 3
 		},{
-			"fromNode": 24,
+			"fromNode": 24,		// -42
 			"toNode": 20,
 			"congestLvl": 3
 		}],
 
 		"0840": [{
-			"fromNode": 1,
+			"fromNode": 1,		// 1
 			"toNode": 2,
 			"congestLvl": 3
 		},{
-			"fromNode": 3,
+			"fromNode": 3,		// 3
 			"toNode": 4,
 			"congestLvl": 2
 		},{
-			"fromNode": 4,
+			"fromNode": 4,		// 4
 			"toNode": 5,
 			"congestLvl": 2
 		},{
-			"fromNode": 5,
+			"fromNode": 5,		// -4
 			"toNode": 4,
 			"congestLvl": 2
 		},{
-			"fromNode": 6,
+			"fromNode": 6,		// -5
 			"toNode": 5,
 			"congestLvl": 2
 		},{
-			"fromNode": 29,
+			"fromNode": 29,		// -7
 			"toNode": 23,
 			"congestLvl": 2
 		},{
-			"fromNode": 26,
+			"fromNode": 26,		// -8
 			"toNode": 29,
 			"congestLvl": 2
 		},{
-			"fromNode": 12,
+			"fromNode": 12,		// -31
 			"toNode": 1,
 			"congestLvl": 3
 		},{
-			"fromNode": 22,
+			"fromNode": 22,		// -32
 			"toNode": 12,
 			"congestLvl": 2
 		},{
-			"fromNode": 13,
+			"fromNode": 13,		// 34
 			"toNode": 18,
 			"congestLvl": 3
 		},{
-			"fromNode": 18,
+			"fromNode": 18,		// -34
 			"toNode": 13,
 			"congestLvl": 3
 		},{
-			"fromNode": 23,
+			"fromNode": 23,		// -35
 			"toNode": 18,
 			"congestLvl": 3
 		},{
-			"fromNode": 14,
+			"fromNode": 14,		// -36
 			"toNode": 3,
 			"congestLvl": 3
 		},{
-			"fromNode": 19,
+			"fromNode": 19,		// -37
 			"toNode": 14,
 			"congestLvl": 4
 		},{
-			"fromNode": 15,
+			"fromNode": 15,		// -40
 			"toNode": 9,
 			"congestLvl": 3
 		},{
-			"fromNode": 20,
+			"fromNode": 20,		// -41
 			"toNode": 15,
 			"congestLvl": 3
 		},{
-			"fromNode": 24,
+			"fromNode": 24,		// -42
 			"toNode": 20,
 			"congestLvl": 3
 		},{
-			"fromNode": 26,
+			"fromNode": 26,		// -43
 			"toNode": 24,
 			"congestLvl": 3
-		}],
+		}]
 
 		"0850": [{
-			"fromNode": 1,
+			"fromNode": 1,		// 1
 			"toNode": 2,
 			"congestLvl": 3
 		},{
-			"fromNode": 2,
+			"fromNode": 2,		// 2
 			"toNode": 3,
 			"congestLvl": 2
 		},{
-			"fromNode": 3,
+			"fromNode": 3,		// -2
 			"toNode": 2,
 			"congestLvl": 2
 		},{
-			"fromNode": 3,
+			"fromNode": 3,		// 3
 			"toNode": 4,
 			"congestLvl": 2
 		},{
-			"fromNode": 4,
+			"fromNode": 4,		// -3
 			"toNode": 3,
 			"congestLvl": 2
 		},{
-			"fromNode": 4,
+			"fromNode": 4,		// 4
 			"toNode": 5,
 			"congestLvl": 2
 		},{
-			"fromNode": 5,
+			"fromNode": 5,		// -4
 			"toNode": 4,
 			"congestLvl": 2
 		},{
-			"fromNode": 6,
+			"fromNode": 6,		// -5
 			"toNode": 5,
 			"congestLvl": 2
 		},{
-			"fromNode": 12,
+			"fromNode": 12,		// -31
 			"toNode": 1,
 			"congestLvl": 3
 		},{
-			"fromNode": 18,
+			"fromNode": 18,		// -34
 			"toNode": 13,
 			"congestLvl": 3
 		},{
-			"fromNode": 23,
+			"fromNode": 23,		// -35
 			"toNode": 18,
 			"congestLvl": 3
 		},{
-			"fromNode": 19,
+			"fromNode": 19,		// -37
 			"toNode": 14,
 			"congestLvl": 3
 		},{
-			"fromNode": 15,
+			"fromNode": 15,		// -40
 			"toNode": 9,
 			"congestLvl": 3
 		},{
-			"fromNode": 20,
+			"fromNode": 20,		// -41
 			"toNode": 15,
 			"congestLvl": 3
 		},{
-			"fromNode": 24,
+			"fromNode": 24,		// -42
 			"toNode": 20,
 			"congestLvl": 3
 		},{
-			"fromNode": 26,
+			"fromNode": 26,		// -43
 			"toNode": 24,
 			"congestLvl": 3
-		}],
+		}]
 
 		"0900": [{
-			"fromNode": 1,
+			"fromNode": 1,		// 1
 			"toNode": 2,
 			"congestLvl": 3
 		},{
-			"fromNode": 2,
+			"fromNode": 2,		// 2
 			"toNode": 3,
 			"congestLvl": 2
 		},{
-			"fromNode": 3,
+			"fromNode": 3,		// 3
 			"toNode": 4,
 			"congestLvl": 2
 		},{
-			"fromNode": 4,
+			"fromNode": 4,		// 4
 			"toNode": 5,
 			"congestLvl": 2
 		},{
-			"fromNode": 6,
+			"fromNode": 6,		// -5
 			"toNode": 5,
 			"congestLvl": 2
 		},{
-			"fromNode": 29,
+			"fromNode": 29,		// 8
 			"toNode": 26,
 			"congestLvl": 3
 		},{
-			"fromNode": 18,
+			"fromNode": 18,		// 35
 			"toNode": 23,
 			"congestLvl": 3
 		},{
-			"fromNode": 19,
+			"fromNode": 19,		// -37
 			"toNode": 14,
 			"congestLvl": 3
 		},{
-			"fromNode": 15,
+			"fromNode": 15,		// -40
 			"toNode": 9,
 			"congestLvl": 3
 		},{
-			"fromNode": 20,
+			"fromNode": 20,		// -41
 			"toNode": 15,
 			"congestLvl": 3
 		},{
-			"fromNode": 24,
+			"fromNode": 24,		// -42
 			"toNode": 20,
 			"congestLvl": 3
 		},{
-			"fromNode": 26,
+			"fromNode": 26,		// -43
 			"toNode": 24,
 			"congestLvl": 4
-		}],
+		}]
 
 		"0910": [{
-			"fromNode": 1,
+			"fromNode": 1,		// 1
 			"toNode": 2,
 			"congestLvl": 3
 		},{
-			"fromNode": 2,
+			"fromNode": 2,		// 2
 			"toNode": 3,
 			"congestLvl": 2
 		},{
-			"fromNode": 3,
+			"fromNode": 3,		// 3
 			"toNode": 4,
 			"congestLvl": 2
 		},{
-			"fromNode": 4,
+			"fromNode": 4,		// 4
 			"toNode": 5,
 			"congestLvl": 2
 		},{
-			"fromNode": 29,
+			"fromNode": 29,		// 8
 			"toNode": 26,
 			"congestLvl": 3
 		},{
-			"fromNode": 27,
+			"fromNode": 27,		// -14
 			"toNode": 25,
 			"congestLvl": 2
 		},{
-			"fromNode": 12,
+			"fromNode": 12,		// 20
 			"toNode": 13,
 			"congestLvl": 4
 		},{
-			"fromNode": 23,
+			"fromNode": 23,		// -35
 			"toNode": 18,
 			"congestLvl": 3
 		},{
-			"fromNode": 14,
+			"fromNode": 14,		// -36
 			"toNode": 3,
 			"congestLvl": 2
 		},{
-			"fromNode": 19,
+			"fromNode": 19,		// -37
 			"toNode": 14,
 			"congestLvl": 4
 		},{
-			"fromNode": 15,
+			"fromNode": 15,		// -40
 			"toNode": 9,
 			"congestLvl": 3
 		},{
-			"fromNode": 20,
+			"fromNode": 20,		// -41
 			"toNode": 15,
 			"congestLvl": 3
 		},{
-			"fromNode": 24,
+			"fromNode": 24,		// -42
 			"toNode": 20,
 			"congestLvl": 3
 		},{
-			"fromNode": 26,
+			"fromNode": 26,		// -43
 			"toNode": 24,
 			"congestLvl": 3
-		}],
+		}]
 
 		"0920": [{
-			"fromNode": 1,
+			"fromNode": 1,		// 1
 			"toNode": 2,
 			"congestLvl": 3
 		},{
-			"fromNode": 6,
+			"fromNode": 6,		// -5
 			"toNode": 5,
 			"congestLvl": 2
 		},{
-			"fromNode": 29,
+			"fromNode": 29,		// 8
 			"toNode": 26,
 			"congestLvl": 3
 		},{
-			"fromNode": 26,
+			"fromNode": 26,		// 9
 			"toNode": 27,
 			"congestLvl": 2
 		},{
-			"fromNode": 27,
+			"fromNode": 27,		// -9
 			"toNode": 26,
 			"congestLvl": 2
 		},{
-			"fromNode": 17,
+			"fromNode": 17,		// -11
 			"toNode": 11,
 			"congestLvl": 2
 		},{
-			"fromNode": 21,
+			"fromNode": 21,		// -12
 			"toNode": 17,
 			"congestLvl": 2
 		},{
-			"fromNode": 25,
+			"fromNode": 25,		// -13
 			"toNode": 21,
 			"congestLvl": 2
 		},{
-			"fromNode": 27,
+			"fromNode": 27,		// -14
 			"toNode": 25,
 			"congestLvl": 2
 		},{
-			"fromNode": 22,
+			"fromNode": 22,		// -32
 			"toNode": 12,
 			"congestLvl": 2
 		},{
-			"fromNode": 20,
+			"fromNode": 20,		// -41
 			"toNode": 15,
 			"congestLvl": 2
 		},{
-			"fromNode": 24,
+			"fromNode": 24,		// -42
 			"toNode": 20,
 			"congestLvl": 2
-		}],
+		}]
 
 		"0940": [{
-			"fromNode": 1,
+			"fromNode": 1,		// 1
 			"toNode": 2,
 			"congestLvl": 2
 		},{
-			"fromNode": 2,
+			"fromNode": 2,		// 2
 			"toNode": 3,
 			"congestLvl": 2
 		},{
-			"fromNode": 3,
+			"fromNode": 3,		// 3
 			"toNode": 4,
 			"congestLvl": 2
 		},{
-			"fromNode": 4,
+			"fromNode": 4,		// 4
 			"toNode": 5,
 			"congestLvl": 2
 		},{
-			"fromNode": 29,
+			"fromNode": 29,		// 8
 			"toNode": 26,
 			"congestLvl": 3
 		},{
-			"fromNode": 25,
+			"fromNode": 25,		// -13
 			"toNode": 21,
 			"congestLvl": 2
 		},{
-			"fromNode": 27,
+			"fromNode": 27,		// -14
 			"toNode": 25,
 			"congestLvl": 3
 		}]

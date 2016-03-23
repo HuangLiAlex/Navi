@@ -68,7 +68,8 @@ public class Segments{
 
 	@Override
 	public String toString(){
-		return getNode1() + "->" + getNode2()+ ": " + getDistance() + ", " + getSpeed();
+//		return getNode1() + "->" + getNode2()+ ": " + getDistance() + ", " + getSpeed() + ", " + this.congesLvl;
+		return getNode1() + "->" + getNode2()+ ": " + this.congesLvl;
 	}
 	
 }

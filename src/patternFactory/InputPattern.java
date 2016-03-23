@@ -1,5 +1,5 @@
 package patternFactory;
 
 public interface InputPattern {
-	void readMap();
+	void readMap(String time);
 }
