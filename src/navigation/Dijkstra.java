@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.HashSet;
 
 public class Dijkstra {
-	public static void dijkstra(int startPoint, int endPoint){
+	public static ArrayList<Integer> dijkstra(int startPoint, int endPoint){
 //		HashMap<String, Integer> nodesMap = NodesMap.getInstance(); //Maps the node name to a index.
 		ArrayList<Nodes> nodeList =  NodeList.getInstance(); //The nodes
 		HashSet<Integer> visited = new HashSet<Integer>();
@@ -16,6 +16,9 @@ public class Dijkstra {
 		ArrayList<Integer> shorteastPath = new ArrayList<Integer>();
 		int currentPoint;
 		
+		for(Nodes n: nodeList){
+			n.setCost(Float.MAX_VALUE);
+		}
 		unvisited.add(startPoint);
 		nodeList.get(startPoint).setCost(0);
 		while(!unvisited.isEmpty() && !visited.contains(endPoint)){
@@ -67,9 +70,10 @@ public class Dijkstra {
 			}
 		}
 		Collections.reverse(shorteastPath);
-		System.out.println(shorteastPath);
-		TimeCalculate.timeCalculate(shorteastPath);
+//		System.out.println(shorteastPath);
+//		TimeCalculate.timeCalculate(shorteastPath);
 //		System.out.println("time spend: " + fmt.format(timeCost) + " min");
+		return shorteastPath;
 	}
 	
 	private static int minOfUnvisited(HashSet<Integer> unvisited){

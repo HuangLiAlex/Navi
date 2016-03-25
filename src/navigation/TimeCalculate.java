@@ -1,23 +1,24 @@
 package navigation;
 
-import java.sql.Date;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class TimeCalculate {
+	private ArrayList<Integer> actualPath = new ArrayList<Integer>();
+	private int nextNode;
 	private Date currentTime;
-	private Nodes currentNode;
-	public static void timeCalculate(ArrayList<Integer> path){
-		
+	
+	public boolean timeCalculate(ArrayList<Integer> path, Date currentTime, Date deadline){
 		ArrayList<ArrayList<Segments>> adjList = AdjList.getInstance();
+		float currSegTime=0;
 		int i=0;
 		int j=1;
-		float totalTime=0;
-		float refTime=0;
-		float currSegTime=0;
 		
+		this.currentTime = currentTime;
 		while(j<path.size()){
 			int fromNode = path.get(i);
 			int toNode = path.get(j);
+			actualPath.add(fromNode);
 			
 			for(Segments segment: adjList.get(fromNode)){
 				if(segment.getNode2() == toNode){
@@ -26,27 +27,30 @@ public class TimeCalculate {
 					break;
 				}
 			}
-			totalTime += currSegTime;
-			refTime += currSegTime;
+
+			this.currentTime.setTime(this.currentTime.getTime() + (int)(currSegTime*60000));
 			
-			if(refTime > 5){
-				// update congestion condition
-				refTime -= 5;
+			if(this.currentTime.after(deadline)){
+				this.nextNode = toNode;
+				return true;
 			}
-			// next segment
+			// else calculate next segment
 			i++;
 			j++;
-//			System.out.println("fn: "+ fromNode + " tn: " + toNode);
 		}
-		
-		System.out.println("total time cost: " + totalTime);
+		actualPath.add(path.get(i));
+		return false;
 	}
 	
+	public int getCurrentNode() {
+		return nextNode;
+	}
+
 	public Date getCurrentTime() {
 		return currentTime;
 	}
-	
-	public Nodes getCurrentNode() {
-		return currentNode;
+
+	public ArrayList<Integer> getActualPath() {
+		return actualPath;
 	}
 }
