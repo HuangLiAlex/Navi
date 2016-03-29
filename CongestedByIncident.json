@@ -1,0 +1,37 @@
+{
+	"details": {
+		"0840": [{
+			"fromNode": 4,
+			"toNode": 5,
+			"congestLvl": 3
+		},{
+			"fromNode": 3,
+			"toNode": 4,
+			"congestLvl": 2
+		}],
+		
+		"case1": [{
+			"fromNode": 4,
+			"toNode": 5,
+			"congestLvl": 4
+		},{
+			"fromNode": 3,
+			"toNode": 4,
+			"congestLvl": 4
+		},{
+			"fromNode": 2,
+			"toNode": 3,
+			"congestLvl": 3
+		}],
+		
+		"case2": [{
+			"fromNode": 1,
+			"toNode": 12,
+			"congestLvl": 4
+		},{
+			"fromNode": 12,
+			"toNode": 22,
+			"congestLvl": 4
+		}]
+	}
+}

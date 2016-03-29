@@ -40,11 +40,12 @@ public class MapSetup{
 
 					Segments s = new Segments(nodeName1, nodeName2, distance, type);
 					
-					s.setCost(ComputeCost.computeSingleSegCost(s));
+//					s.setCost(ComputeCost.computeSingleSegCost(s));
+					ComputeCost.computeSegCost(s);
 					segments.add(s);
 					
 					s = new Segments(nodeName2, nodeName1, distance, type);
-					s.setCost(ComputeCost.computeSingleSegCost(s));
+					ComputeCost.computeSegCost(s);
 					segments.add(s);
 				} 
 			} 

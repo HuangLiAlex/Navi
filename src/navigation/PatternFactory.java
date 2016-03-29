@@ -8,8 +8,12 @@ public class PatternFactory {
     	  return null;
       }		
       
-      if(patternType.equalsIgnoreCase("congestionByTime")){
-    	  return new congestionByTime();
+      if(patternType.equalsIgnoreCase("CongestionByTime")){
+    	  return new CongestionByTime();
+      }
+      
+      if(patternType.equalsIgnoreCase("CongestionByIncident")){
+    	  return new CongestionByIncident();
       }
       
       return null;

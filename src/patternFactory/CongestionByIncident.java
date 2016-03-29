@@ -9,24 +9,22 @@ import org.json.simple.parser.JSONParser;
 
 import navigation.AdjList;
 import navigation.ComputeCost;
-import navigation.SegmentList;
 import navigation.Segments;
-import navigation.TimeCalculate;
 import navigation.Utilisation;
 
-public class CongestionByTime implements InputPattern {	
+public class CongestionByIncident implements InputPattern{
+
 	@Override
 	public void readMap(String requestedTime) {
 		ArrayList<ArrayList<Segments>> adjList = AdjList.getInstance();
-		ArrayList<Segments> segments = SegmentList.getInstance();
 		JSONParser parser = new JSONParser();
 		 
         try {
-            Object obj = parser.parse(new FileReader("congestionByTime.json"));
+            Object obj = parser.parse(new FileReader("congestedByIncident.json"));
             
             JSONObject jsonObject = (JSONObject) obj;
             JSONObject details = (JSONObject) jsonObject.get("details");
-        	JSONArray time = (JSONArray) details.get(requestedTime);		// get congestion condition by time
+        	JSONArray time = (JSONArray) details.get(requestedTime);
 
     		// get info from JSON file and update the segment arraylist
     		for(int j=0; j<time.size(); j++){
@@ -38,17 +36,14 @@ public class CongestionByTime implements InputPattern {
              	
              	for(Segments segment: adjList.get(fromNode)){
     				if(segment.getNode2() == toNode){
-    					int prevCongesLvl = segment.getCongesLvl();
-    					int newCongesLvl = (prevCongesLvl + congesLvl)/2;
-    					segment.setCongesLvl(newCongesLvl);
-    					Utilisation.updateUtilisation(segment, newCongesLvl);
+    					segment.setCongesLvl(congesLvl);
+    					Utilisation.updateUtilisation(segment, congesLvl);
+    		    		// compute cost for changed segments
+    		    		ComputeCost.computeSegCost(segment);
     					break;
     				}
     			}
          	}
-    		
-    		// compute cost for all segments
-    		ComputeCost.computeAllSegCost();
         } catch (Exception e) {
             e.printStackTrace();
         }

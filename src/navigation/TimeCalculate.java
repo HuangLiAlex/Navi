@@ -42,6 +42,31 @@ public class TimeCalculate {
 		return false;
 	}
 	
+	public static float calcuPathCost(ArrayList<Integer> path){
+		ArrayList<ArrayList<Segments>> adjList = AdjList.getInstance();
+		float currSegTime=0;
+		float totalTime = 0;
+		int i=0;
+		int j=1;
+
+		while(j<path.size()){
+			int fromNode = path.get(i);
+			int toNode = path.get(j);
+			
+			for(Segments segment: adjList.get(fromNode)){
+				if(segment.getNode2() == toNode){
+					ComputeCost.computeSegCost(segment);
+					currSegTime = segment.getCost();
+					break;
+				}
+			}
+			totalTime += currSegTime;
+			i++;
+			j++;
+		}
+		return totalTime;
+	}
+	
 	public int getCurrentNode() {
 		return nextNode;
 	}
