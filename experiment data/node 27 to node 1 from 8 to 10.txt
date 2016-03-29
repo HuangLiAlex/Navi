@@ -1,0 +1,55 @@
+start time : 08:00 
+update time: 08:00 current node: 27
+actual path: [27, 25, 21, 17, 11, 6, 5, 4, 3, 2, 1]
+12.303  // this is the shortest and fastest path without congestion
+
+start time : 08:20 
+update time: 08:20 current node: 27
+actual path: [27, 25, 21, 17, 11, 6, 5, 4, 3, 2, 1]
+15.79605
+
+start time : 08:30
+update time: 08:20 current node: 27
+update time: 08:40 current node: 5
+actual path: [27, 25, 21, 17, 11, 6, 5, 4, 3, 2, 1]
+15.0453 // this is sligitly shorter than 8:20, because congestion level of node 5-4 reduce from 3 to 2
+
+start time : 08:40
+update time: 08:40 current node: 27
+update time: 08:50 current node: 5
+actual path: [27, 25, 21, 17, 11, 6, 5, 4, 3, 2, 1]
+17.29925 // longer than 8:30 because congestion level of node 5 -> 2 became 2
+
+start time : 08:50
+update time: 08:50 current node: 27
+update time: 09:00 current node: 12
+actual path: [27, 26, 29, 23, 22, 12, 1]
+12.320184 // congestion at node 12-1 is gone, so optimum value, choose PIE instead of AYE because AYE congested
+
+start time : 09:00
+update time: 09:00 current node: 27
+update time: 09:10 current node: 12
+actual path: [27, 26, 29, 23, 22, 12, 1]
+12.320184 // both PIE and AYE are quite smooth but node 6-5 congested slightly, so choose PIE
+
+start time : 09:10
+update time: 09:10 current node: 27
+update time: 09:20 current node: 12
+actual path: [27, 26, 29, 23, 22, 12, 1]
+12.320184 // when 9:10,choose PIE because node 27-25 congested
+
+start time : 09:20
+update time: 09:20 current node: 27
+actual path: [27, 26, 29, 23, 22, 12, 1]
+18.40425 // On PIE, node 27-26, node 22-12 are congested, but CTE all congested for next 20 min
+
+start time : 09:30
+update time: 09:20 current node: 27
+update time: 09:40 current node: 23
+actual path: [27, 26, 29, 23, 22, 12, 1]
+16.30215
+
+start time : 09:40
+update time: 09:40 current node: 27
+actual path: [27, 26, 29, 23, 22, 12, 1]
+12.320184

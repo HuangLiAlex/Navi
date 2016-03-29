@@ -1,0 +1,53 @@
+start time: 8:0
+current node: 1 update time: 08:00
+actual path: [1, 2, 3, 4, 5, 6]
+6.189017
+
+start time: 8:20
+current node: 1 update time: 08:20
+actual path: [1, 2, 3, 4, 5, 6]
+8.592317
+
+start time: 8:30 current node: 1
+update time: 08:20
+actual path: [1, 2, 3, 4, 5, 6]
+8.592317
+
+start time: 8:40
+current node: 1 update time: 08:40
+current node: 6 update time: 08:50
+actual path: [1, 2, 3, 4, 5, 6]
+10.09495
+
+start time: 8:50
+current node: 1 update time: 08:50
+current node: 6 update time: 09:00
+actual path: [1, 2, 3, 4, 5, 6]
+11.597584
+
+start time: 9:0
+current node: 1 update time: 09:00
+current node: 6 update time: 09:10
+actual path: [1, 2, 3, 4, 5, 6]
+11.597584
+
+start time: 9:10
+current node: 1 update time: 09:10
+current node: 6 update time: 09:20
+actual path: [1, 2, 3, 4, 5, 6]
+11.597584
+
+start time: 9:20
+current node: 1 update time: 09:20
+actual path: [1, 2, 3, 4, 5, 6]
+8.592317
+
+start time: 9:30 
+current node: 1 update time: 09:20
+actual path: [1, 2, 3, 4, 5, 6]
+8.592317
+
+start time: 9:40
+current node: 1 update time: 09:40
+actual path: [1, 2, 3, 4, 5, 6]
+10.396383

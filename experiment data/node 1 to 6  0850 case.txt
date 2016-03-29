@@ -1,0 +1,31 @@
+// clean condition
+start time: 08:00
+current node: 1
+update time: 08:00
+actual path: [1, 2, 3, 4, 5, 6]
+6.189017
+
+// normal congestion condition
+start time: 8:50
+current node: 1 update time: 08:50
+current node: 6 update time: 09:00
+actual path: [1, 2, 3, 4, 5, 6]
+11.597584
+
+// when accident happend at node 3-4 at 08:50, while 1-4 all congested
+start time: 8:50
+current node: 1
+update time: 08:50
+current node: 16
+update time: 09:00
+actual path: [1, 12, 13, 14, 15, 16, 10, 5, 6]
+13.9249
+
+// when accident happend from 16-10-5 at 9:00 and congestion level = 3
+start time: 8:50
+current node: 1
+update time: 08:50
+current node: 16
+update time: 09:00
+actual path: [1, 12, 13, 14, 15, 16, 17, 11, 6]
+17.356133

@@ -1,0 +1,97 @@
+start time: 08:00
+current node: 1
+update time: 08:00
+total time spend: 12.303
+[1, 2, 3, 4, 5, 6, 11, 17, 21, 25, 27]
+
+start time: 08:50
+current node: 1
+update time: 08:50
+current node: 27
+update time: 09:00
+total time spend: 12.320184
+[1, 12, 22, 23, 29, 26, 27]
+
+before divert
+main path: [1, 2, 3, 4, 5, 6, 11, 17, 21, 25, 27]
+total time cost: 20.21731
+from: 1 to: 2 uti: 60 congest: 2 time: 2.7172375 speed: 588.8333
+from: 2 to: 3 uti: 80 congest: 3 time: 3.396547 speed: 588.8333
+from: 3 to: 4 uti: 100 congest: 4 time: 3.0007503 speed: 333.25
+from: 4 to: 5 uti: 100 congest: 4 time: 3.0007503 speed: 333.25
+from: 5 to: 6 uti: 50 congest: 1 time: 1.987997 speed: 1333.0
+from: 6 to: 11 uti: 50 congest: 1 time: 0.30007502 speed: 1333.0
+from: 11 to: 17 uti: 50 congest: 1 time: 1.2903225 speed: 1333.0
+from: 17 to: 21 uti: 50 congest: 1 time: 0.9452363 speed: 1333.0
+from: 21 to: 25 uti: 50 congest: 1 time: 1.2528132 speed: 1333.0
+from: 25 to: 27 uti: 50 congest: 1 time: 2.3255813 speed: 1333.0
+
+detour path: [1, 12, 22, 23, 29, 26, 27]
+total time cost: 14.216392
+from: 1 to: 12 uti: 50 congest: 1 time: 0.7507508 speed: 666.0
+from: 12 to: 22 uti: 50 congest: 1 time: 2.102102 speed: 666.0
+from: 22 to: 23 uti: 50 congest: 1 time: 1.2153038 speed: 1333.0
+from: 23 to: 29 uti: 50 congest: 1 time: 2.775694 speed: 1333.0
+from: 29 to: 26 uti: 60 congest: 2 time: 3.396547 speed: 588.8333
+from: 26 to: 27 uti: 50 congest: 1 time: 3.975994 speed: 1333.0
+
+after divert
+main path: [1, 2, 3, 4, 5, 6, 11, 17, 21, 25, 27]
+total time cost: 18.436874
+from: 1 to: 2 uti: 50 congest: 1 time: 1.2003001 speed: 1333.0
+from: 2 to: 3 uti: 70 congest: 2 time: 3.9126182 speed: 511.16666
+from: 3 to: 4 uti: 90 congest: 3 time: 2.610966 speed: 383.0
+from: 4 to: 5 uti: 90 congest: 3 time: 2.610966 speed: 383.0
+from: 5 to: 6 uti: 50 congest: 1 time: 1.987997 speed: 1333.0
+from: 6 to: 11 uti: 50 congest: 1 time: 0.30007502 speed: 1333.0
+from: 11 to: 17 uti: 50 congest: 1 time: 1.2903225 speed: 1333.0
+from: 17 to: 21 uti: 50 congest: 1 time: 0.9452363 speed: 1333.0
+from: 21 to: 25 uti: 50 congest: 1 time: 1.2528132 speed: 1333.0
+from: 25 to: 27 uti: 50 congest: 1 time: 2.3255813 speed: 1333.0
+
+detour path: [1, 12, 22, 23, 29, 26, 27]
+total time cost: 29.09114
+from: 1 to: 12 uti: 70 congest: 2 time: 1.8796992 speed: 266.0
+from: 12 to: 22 uti: 70 congest: 2 time: 5.263158 speed: 266.0
+from: 22 to: 23 uti: 60 congest: 2 time: 2.751203 speed: 588.8333
+from: 23 to: 29 uti: 60 congest: 2 time: 6.283612 speed: 588.8333
+from: 29 to: 26 uti: 70 congest: 2 time: 3.9126182 speed: 511.16666
+from: 26 to: 27 uti: 60 congest: 2 time: 9.00085 speed: 588.8333
+
+detour path 2: [1, 2, 3, 4, 5, 6, 11, 17, 21, 25, 27]
+from: 1 to: 2 uti: 50 congest: 1 time: 1.2003001 speed: 1333.0
+from: 2 to: 3 uti: 70 congest: 2 time: 3.9126182 speed: 511.16666
+from: 3 to: 4 uti: 90 congest: 3 time: 2.610966 speed: 383.0
+from: 4 to: 5 uti: 90 congest: 3 time: 2.610966 speed: 383.0
+from: 5 to: 6 uti: 50 congest: 1 time: 1.987997 speed: 1333.0
+from: 6 to: 11 uti: 50 congest: 1 time: 0.30007502 speed: 1333.0
+from: 11 to: 17 uti: 50 congest: 1 time: 1.2903225 speed: 1333.0
+from: 17 to: 21 uti: 50 congest: 1 time: 0.9452363 speed: 1333.0
+from: 21 to: 25 uti: 50 congest: 1 time: 1.2528132 speed: 1333.0
+from: 25 to: 27 uti: 50 congest: 1 time: 2.3255813 speed: 1333.0
+main path: [1, 2, 3, 4, 5, 6, 11, 17, 21, 25, 27]
+total time cost: 19.953812
+from: 1 to: 2 uti: 60 congest: 2 time: 2.7172375 speed: 588.8333
+from: 2 to: 3 uti: 80 congest: 3 time: 3.9126182 speed: 511.16666
+from: 3 to: 4 uti: 90 congest: 3 time: 2.610966 speed: 383.0
+from: 4 to: 5 uti: 90 congest: 3 time: 2.610966 speed: 383.0
+from: 5 to: 6 uti: 50 congest: 1 time: 1.987997 speed: 1333.0
+from: 6 to: 11 uti: 50 congest: 1 time: 0.30007502 speed: 1333.0
+from: 11 to: 17 uti: 50 congest: 1 time: 1.2903225 speed: 1333.0
+from: 17 to: 21 uti: 50 congest: 1 time: 0.9452363 speed: 1333.0
+from: 21 to: 25 uti: 50 congest: 1 time: 1.2528132 speed: 1333.0
+from: 25 to: 27 uti: 50 congest: 1 time: 2.3255813 speed: 1333.0
+
+detour path: [1, 2, 3, 4, 5, 6, 11, 17, 21, 25, 27]
+total time cost: 19.953812
+from: 1 to: 2 uti: 60 congest: 2 time: 2.7172375 speed: 588.8333
+from: 2 to: 3 uti: 80 congest: 3 time: 3.9126182 speed: 511.16666
+from: 3 to: 4 uti: 90 congest: 3 time: 2.610966 speed: 383.0
+from: 4 to: 5 uti: 90 congest: 3 time: 2.610966 speed: 383.0
+from: 5 to: 6 uti: 50 congest: 1 time: 1.987997 speed: 1333.0
+from: 6 to: 11 uti: 50 congest: 1 time: 0.30007502 speed: 1333.0
+from: 11 to: 17 uti: 50 congest: 1 time: 1.2903225 speed: 1333.0
+from: 17 to: 21 uti: 50 congest: 1 time: 0.9452363 speed: 1333.0
+from: 21 to: 25 uti: 50 congest: 1 time: 1.2528132 speed: 1333.0
+from: 25 to: 27 uti: 50 congest: 1 time: 2.3255813 speed: 1333.0
+
