@@ -12,7 +12,7 @@ public class Utilisation {
 		}else if(congestLvl == 2){
 			s.setUtilisation(60);
 		}else if(congestLvl == 1){
-			s.setUtilisation(50);
+			s.setUtilisation(40);
 		}
 	}
 	
@@ -21,7 +21,7 @@ public class Utilisation {
 			s.setCongesLvl(4);
 		}else if(utilisation >= 80){
 			s.setCongesLvl(3);
-		}else if(utilisation >= 60){
+		}else if(utilisation >= 50){
 			s.setCongesLvl(2);
 		}else{
 			s.setCongesLvl(1);
@@ -55,7 +55,6 @@ public class Utilisation {
 	
 	public static void divert(ArrayList<Integer> mainPath, ArrayList<Integer> divertPath, int rate){
 		ArrayList<ArrayList<Segments>> adjList = AdjList.getInstance();
-		boolean flag = true;
 		int divertNode = 0;
 
 		// find divert node
@@ -92,26 +91,21 @@ public class Utilisation {
 		// update divert path
 		i = divertNode;
 		j = i + 1;
-		flag = true;
-		while(flag && j<divertPath.size()){
+		while(j<divertPath.size()){
 			int fromNode = divertPath.get(i);
 			int toNode = divertPath.get(j);
 			
 			for(Segments segment: adjList.get(fromNode)){
 				if(segment.getNode2() == toNode){
-					if(segment.getUtilisation()<80){
-						int newUtilisation;
-						if(segment.getType().equals("express")){
-							newUtilisation = segment.getUtilisation() + rate;
-						}else{
-							newUtilisation = (int) (segment.getUtilisation() + rate * (30/25.0));
-						}
-						segment.setUtilisation(newUtilisation);
-						updateCongest(segment, newUtilisation);
-						break;
+					int newUtilisation;
+					if(segment.getType().equals("express")){
+						newUtilisation = segment.getUtilisation() + rate;
 					}else{
-						flag = false;
+						newUtilisation = (int) (segment.getUtilisation() + rate * (30/25.0));
 					}
+					segment.setUtilisation(newUtilisation);
+					updateCongest(segment, newUtilisation);
+					break;
 				}
 			}
 			i++;

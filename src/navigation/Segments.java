@@ -17,7 +17,7 @@ public class Segments{
 		this.type  = type;
 		this.congesLvl = 1;
 		this.cost = 1;
-		this.utilisation = 50;
+		this.utilisation = 40;
 		if(type.equals("express")){
 			this.setSpeed(80 * 1000 / 60);		// 80km/h
 		}else{

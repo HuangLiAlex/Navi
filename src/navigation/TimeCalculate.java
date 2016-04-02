@@ -7,6 +7,7 @@ public class TimeCalculate {
 	private ArrayList<Integer> actualPath = new ArrayList<Integer>();
 	private int nextNode;
 	private Date currentTime;
+	private Date updateNext = new Date();
 	
 	public boolean timeCalculate(ArrayList<Integer> path, Date currentTime, Date deadline){
 		ArrayList<ArrayList<Segments>> adjList = AdjList.getInstance();
@@ -18,7 +19,6 @@ public class TimeCalculate {
 		while(j<path.size()){
 			int fromNode = path.get(i);
 			int toNode = path.get(j);
-			actualPath.add(fromNode);
 			
 			for(Segments segment: adjList.get(fromNode)){
 				if(segment.getNode2() == toNode){
@@ -31,14 +31,18 @@ public class TimeCalculate {
 			this.currentTime.setTime(this.currentTime.getTime() + (int)(currSegTime*60000));
 			
 			if(this.currentTime.after(deadline)){
-				this.nextNode = toNode;
+				this.updateNext.setTime(currentTime.getTime());
+				this.currentTime.setTime(this.currentTime.getTime() - (int)(currSegTime*60000));
+				this.nextNode = fromNode;
 				return true;
+			}else{
+				actualPath.add(fromNode);
 			}
 			// else calculate next segment
 			i++;
 			j++;
 		}
-		actualPath.add(path.get(i));
+		actualPath.add(path.get(i));	// add the destination node
 		return false;
 	}
 	
@@ -77,5 +81,9 @@ public class TimeCalculate {
 
 	public ArrayList<Integer> getActualPath() {
 		return actualPath;
+	}
+
+	public Date getUpdateNext() {
+		return updateNext;
 	}
 }

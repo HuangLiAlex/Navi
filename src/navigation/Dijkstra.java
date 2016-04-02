@@ -7,7 +7,6 @@ import java.util.HashSet;
 
 public class Dijkstra {
 	public static ArrayList<Integer> dijkstra(int startPoint, int endPoint){
-//		HashMap<String, Integer> nodesMap = NodesMap.getInstance(); //Maps the node name to a index.
 		ArrayList<Nodes> nodeList =  NodeList.getInstance(); //The nodes
 		HashSet<Integer> visited = new HashSet<Integer>();
 		HashSet<Integer> unvisited = new HashSet<Integer>();
@@ -28,7 +27,6 @@ public class Dijkstra {
 			path.add(currentPoint);
 			
 			for(Segments neighbor: adjList.get(currentPoint)){
-//				int node2 = nodesMap.get(neighbor.getNode2());
 				int node2 = neighbor.getNode2();
 				if(!visited.contains(node2)){
 					unvisited.add(node2);	// add neighbor index to unvisited
@@ -43,29 +41,28 @@ public class Dijkstra {
 		
 		// return the path
 		int evalPoint = endPoint;
-//		System.out.println(path);
 		Collections.reverse(path);
 		int nextIdx = path.indexOf(evalPoint);
 		shorteastPath.add(endPoint);
 		
-//		float timeCost = 0;
-		DecimalFormat fmt = new DecimalFormat(".00");
 		while(evalPoint != startPoint){
 			nextIdx++;
 			int nextNode = path.get(nextIdx);
-//			System.out.println(nextIdx);
 			
 			for(Segments segment: adjList.get(nextNode)){
 				float cost = nodeList.get(evalPoint).getCost() - segment.getCost();
 				float nodeCost = nodeList.get(nextNode).getCost();
-//				System.out.println(fmt.format(segCost) + "--" + fmt.format(nodeCost));
-//				if(nodesMap.get(segment.getNode2()) == evalPoint &&  fmt.format(cost).equals(fmt.format(nodeCost))){
-				if(segment.getNode2() == evalPoint &&  fmt.format(cost).equals(fmt.format(nodeCost))){
-//					timeCost += segment.getCost();
-					shorteastPath.add(nextNode);
-					evalPoint = nextNode;
-					nextIdx = path.indexOf(evalPoint);
-					break;
+				int costInt = (int) (cost * 1000);
+				int nodeCostInt =  (int) (nodeCost * 1000);
+//				System.out.println(segment.getNode2() + " " + evalPoint);
+				if(segment.getNode2() == evalPoint){
+//					System.out.println(costInt + "--" + nodeCostInt);
+					if(Math.abs(costInt - nodeCostInt) <= 1){
+						shorteastPath.add(nextNode);
+						evalPoint = nextNode;
+						nextIdx = path.indexOf(evalPoint);
+						break;
+					}
 				}
 			}
 		}

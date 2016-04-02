@@ -24,33 +24,25 @@ public class ComputeCost {
 	
 	private static void computeSpeed(Segments segment){
 		if(segment.getType().equals("express")){
-			if(segment.getCongesLvl() == 2){		// uti = 51 -> 80
-				if(segment.getUtilisation()>=70){
-					segment.setSpeed((float) (30.67 * 1000/60));
-				}else if(segment.getUtilisation()>=60){
-					segment.setSpeed((float) (35.33 *1000/60));
-				}
-			}else if(segment.getCongesLvl() == 3){
-				if(segment.getUtilisation()>=90){
-					segment.setSpeed((float) (23 * 1000/60));
-				}
+			if(segment.getUtilisation() >= 100){
+				segment.setSpeed(convertSpeed(20));
+			}else if(segment.getUtilisation() > 40){
+				segment.setSpeed(convertSpeed((float) ((100 - segment.getUtilisation())/60.0 * 20 + 20)));
 			}else{
-				segment.setSpeed((float) (80*1000/60)/segment.getCongesLvl());
+				segment.setSpeed(convertSpeed(80));
 			}
-		}else{		// normal roal
-			if(segment.getCongesLvl() == 2){		// uti = 51 -> 80
-				if(segment.getUtilisation()>=70){
-					segment.setSpeed((float) (16 * 1000/60));
-				}else if(segment.getUtilisation()>=60){
-					segment.setSpeed((float) (18 *1000/60));
-				}
-			}else if(segment.getCongesLvl() == 3){
-				if(segment.getUtilisation()>=90){
-					segment.setSpeed((float) (12 * 1000/60));
-				}
+		}else{		// normal road
+			if(segment.getUtilisation() >= 100){
+				segment.setSpeed(convertSpeed(10));
+			}else if(segment.getUtilisation() > 40){
+				segment.setSpeed(convertSpeed((float) ((100 - segment.getUtilisation())/60.0 * 10 + 10)));
 			}else{
-				segment.setSpeed((float) (40*1000/60)/segment.getCongesLvl());
+				segment.setSpeed(convertSpeed(40));
 			}
 		}
+	}
+	
+	private static float convertSpeed(float speed){
+		return (float) (speed * 1000/60.0);
 	}
 }
