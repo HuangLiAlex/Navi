@@ -33,5 +33,15 @@
 			"toNode": 22,
 			"congestLvl": 4
 		}]
+		
+		"case3": [{
+			"fromNode": 29,
+			"toNode": 26,
+			"congestLvl": 3
+		},{
+			"fromNode": 26,
+			"toNode": 27,
+			"congestLvl": 3
+		}]
 	}
 }

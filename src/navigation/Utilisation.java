@@ -43,8 +43,8 @@ public class Utilisation {
 					System.out.print("from: "+ fromNode + " to: " + toNode);
 					System.out.print(" uti: " + utilisation);
 					System.out.print(" congest: " + segment.getCongesLvl());
-					System.out.print(" time: " + segment.getCost());
-					System.out.println(" speed: " + segment.getSpeed());
+					System.out.print(" time: " + (int) segment.getCost());
+					System.out.println(" speed: " + (segment.getSpeed()*60/1000) + " km/h");
 					break;
 				}
 			}
@@ -56,7 +56,8 @@ public class Utilisation {
 	public static void divert(ArrayList<Integer> mainPath, ArrayList<Integer> divertPath, int rate){
 		ArrayList<ArrayList<Segments>> adjList = AdjList.getInstance();
 		int divertNode = 0;
-
+		int newUtilisation;
+		
 		// find divert node
 		while(mainPath.get(divertNode) != divertPath.get(divertNode)){
 			divertNode++;
@@ -72,16 +73,13 @@ public class Utilisation {
 			for(Segments segment: adjList.get(fromNode)){
 				if(segment.getNode2() == toNode){
 					if(segment.getType().equals("express")){
-						int newUtilisation = segment.getUtilisation() - rate;
-						segment.setUtilisation(newUtilisation);
-						updateCongest(segment, newUtilisation);
-						break;
+						newUtilisation = segment.getUtilisation() - rate;
 					}else{
-						int newUtilisation = (int) (segment.getUtilisation() - rate * (30/25.0));
-						segment.setUtilisation(newUtilisation);
-						updateCongest(segment, newUtilisation);
-						break;
+						newUtilisation = (int) (segment.getUtilisation() - rate * (30/25.0));
 					}
+					segment.setUtilisation(newUtilisation);
+					updateCongest(segment, newUtilisation);
+					break;
 				}
 			}
 			i++;
@@ -97,7 +95,6 @@ public class Utilisation {
 			
 			for(Segments segment: adjList.get(fromNode)){
 				if(segment.getNode2() == toNode){
-					int newUtilisation;
 					if(segment.getType().equals("express")){
 						newUtilisation = segment.getUtilisation() + rate;
 					}else{

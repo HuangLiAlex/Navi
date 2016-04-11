@@ -26,16 +26,20 @@ public class ComputeCost {
 		if(segment.getType().equals("express")){
 			if(segment.getUtilisation() >= 100){
 				segment.setSpeed(convertSpeed(20));
-			}else if(segment.getUtilisation() > 40){
-				segment.setSpeed(convertSpeed((float) ((100 - segment.getUtilisation())/60.0 * 20 + 20)));
+			}else if(segment.getUtilisation() > 80){
+				segment.setSpeed(convertSpeed((100 - segment.getUtilisation()) + 20));
+			}else if(segment.getUtilisation() > 50){
+				segment.setSpeed(convertSpeed((float) ((80 - segment.getUtilisation())/3*4 + 40)));
 			}else{
 				segment.setSpeed(convertSpeed(80));
 			}
 		}else{		// normal road
 			if(segment.getUtilisation() >= 100){
 				segment.setSpeed(convertSpeed(10));
-			}else if(segment.getUtilisation() > 40){
-				segment.setSpeed(convertSpeed((float) ((100 - segment.getUtilisation())/60.0 * 10 + 10)));
+			}else if(segment.getUtilisation() > 80){
+				segment.setSpeed(convertSpeed((float) ((100 - segment.getUtilisation())/2 + 10)));
+			}else if(segment.getUtilisation() > 50){
+				segment.setSpeed(convertSpeed((float) ((80 - segment.getUtilisation())/3*2 + 20)));
 			}else{
 				segment.setSpeed(convertSpeed(40));
 			}
